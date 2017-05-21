@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ActiveBox : MonoBehaviour {
 
-    public Animator anim;
+    public Animator anim; 
     public Rigidbody rb;
 
     public bool Active = false;

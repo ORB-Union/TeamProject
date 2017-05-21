@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Camera_Ctrl.cs" />
      <Compile Include="Assets\animation\Move_Control\ActiveBox.cs" />
      <Compile Include="Assets\animation\Move_Control\CreateBox.cs" />
      <Compile Include="Assets\animation\Move_Control\PlayerControl.cs" />
