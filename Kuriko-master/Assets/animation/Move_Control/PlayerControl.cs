@@ -120,7 +120,6 @@ public class PlayerControl : MonoBehaviour {
                 //GameObject BoxPosition = (GameObject)Instantiate (CreateBox); // Z키를 누르면 박스를 생성
                 //BoxPosition.transform.position = CreateBoxPosition.transform.position; 
                 //CreateBoxFire(); // 아래에 있음
-
             }
         }
     

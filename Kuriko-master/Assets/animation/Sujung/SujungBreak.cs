@@ -8,29 +8,66 @@ public class SujungBreak : MonoBehaviour {
     Rigidbody rb;
     GameObject Sujung;
 
-    // Use this for initialization
-    void Start() {
 
-    }
+    public Animator anim; // 헤딩액티브
+
+    public bool Heading;
+
+    public float HeadTimer = 0;
+    public float HeadCd = 2f;
 
     void Awake()
     {
+        Heading = false;
         animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();  // rigidbody에서 지원하는 AddForce를 사용하기 위해
+    }
+
+
+    // Use this for initialization
+    void Start()
+    {
+
     }
 
     // Update is called once per frame
     void Update()
     {
-           
+        if (Input.GetKeyDown(KeyCode.X) && !Heading)
+        {
+            Heading = true;
+            HeadTimer = HeadCd;
+        }
+        if (Heading)
+        {
+            if (HeadTimer > 0)
+            {
+                HeadTimer -= Time.deltaTime;
+            }
+
+            else
+            {
+                Heading = false;
+            }
+        }
     }
 
+    /*
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Kuriko")
+        if (other.tag == "Kuriko" && Heading == true)
+        {
+                animator.SetBool("Breaking", true);
+                DestroyObject(gameObject, 3.0f);
+        }
+    }
+    */
+    void OnTriggerStay(Collider other) // 충돌박스 내부에 있을경우 (Enter)는 들어가는 즉시 이고 Stay는 박스안에 머무를경우
+    {
+        if (other.tag == "Kuriko" && Heading == true)
         {
             animator.SetBool("Breaking", true);
             DestroyObject(gameObject, 3.0f);
         }
+
     }
 }
