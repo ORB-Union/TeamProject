@@ -9,6 +9,9 @@ public class ActiveHeading : MonoBehaviour {
 
     public bool Heading;
 
+
+    bool death;
+
     public float HeadTimer = 0;
     public float HeadCd = 2f;
 
@@ -17,7 +20,7 @@ public class ActiveHeading : MonoBehaviour {
         Heading = false;
         anim = gameObject.GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-        
+        death = false;        
     }
 
 

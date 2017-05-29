@@ -11,26 +11,23 @@ public class ActiveBox : MonoBehaviour {
 
     public float ActiveTimer = 0;
     public float ActiveCd = 2f;
+ 
 
     void Awake()
     {
         Active = false;
         anim = gameObject.GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-
     }
 
     void Update()
     {
-       
-        if (Input.GetKeyDown(KeyCode.Z) && ! Active)
+        if (Input.GetKeyDown(KeyCode.Z) && !Active)
         {
             Active = true;
             ActiveTimer = ActiveCd;
-
-           
         }
-        if(Active)
+        if (Active)
         {
             if (ActiveTimer > 0)
             {
@@ -42,10 +39,6 @@ public class ActiveBox : MonoBehaviour {
                 Active = false;
             }
         }
-
         anim.SetBool("Active", Active);
     }
-
-
-
 }

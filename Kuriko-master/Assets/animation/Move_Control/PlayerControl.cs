@@ -53,7 +53,6 @@ public class PlayerControl : MonoBehaviour {
 
         else // 죽지않았을경우 (death == false)
         {
-
             if (animator)
             {
                 float h = Input.GetAxis("Horizontal");
@@ -136,26 +135,33 @@ public class PlayerControl : MonoBehaviour {
     //박스 생성 위치변화
     void CreateBoxFire()
     {
-        //오른쪽으로 보지 않을경우
-        if (!facingright)
+        if (death == true || animator.GetCurrentAnimatorStateInfo(0).nameHash == Animator.StringToHash("Base Layer.Active"))
         {
-            //방향조정
-            transform.localScale = new Vector3(0.6f * directionX, 0.5f, 1.0f);
-            //생성위치 조정
-            Instantiate(leftCreateBoxPosition, Createpos.position, Quaternion.identity);  // 캐릭터앞에 ray 쏴서 박스 놓을 공간 확인(아직 안함)
+            return;
         }
-
-        //오른쪽으로 바라볼경우
-        if(facingright)
+        else
         {
-            //방향 조정
-            transform.localScale = new Vector3(0.6f * directionX, 0.5f, 1.0f);
-            //생성 위치 조정
-            Instantiate(rightCreateBoxPosition, Createpos.position * directionX, Quaternion.identity);   
+            //오른쪽으로 보지 않을경우
+            if (!facingright)
+            {
+                //방향조정
+                transform.localScale = new Vector3(0.6f * directionX, 0.5f, 1.0f);
+                //생성위치 조정
+                Instantiate(leftCreateBoxPosition, Createpos.position, Quaternion.identity);  // 캐릭터앞에 ray 쏴서 박스 놓을 공간 확인
+            }
+
+            //오른쪽으로 바라볼경우
+            if (facingright)
+            {
+                //방향 조정
+                transform.localScale = new Vector3(0.6f * directionX, 0.5f, 1.0f);
+                //생성 위치 조정
+                Instantiate(rightCreateBoxPosition, Createpos.position * directionX, Quaternion.identity);
 
 
+            }
+            //위치 재조정
+            transform.localScale = new Vector3(0.5f, 0.5f, 1.0f);
         }
-        //위치 재조정
-        transform.localScale = new Vector3(0.5f, 0.5f, 1.0f);
     }
 }
