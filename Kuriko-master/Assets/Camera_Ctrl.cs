@@ -19,8 +19,8 @@ public class Camera_Ctrl : MonoBehaviour {
         // NewPosition =  kuriko.transform.position + new Vector3(0.0f, 2.9f, -2.6f);
 
 
-        transform.position = new Vector3(Mathf.Clamp(kuriko.transform.position.x, -50.0f, 1.70f), kuriko.transform.position.y + 2.9f, kuriko.transform.position.z - 2.6f);
-
+        transform.position = new Vector3(Mathf.Clamp(kuriko.transform.position.x, -51.5f, 2.3f), // x축으로 -53.5f이하 4.3f이상 카메라 못움직이게
+            Mathf.Clamp(kuriko.transform.position.y, -18.5f, 7.0f) + 2.9f, kuriko.transform.position.z - 2.6f);
 
     }
 }
