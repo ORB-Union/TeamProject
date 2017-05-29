@@ -19,7 +19,7 @@ public class CreateBox : MonoBehaviour {
     }
     void Create()
     {      
-        Invoke("Create", 3.0f);
+        Invoke("Create", 1.0f);
         Vector2 position = transform.position;
         position = new Vector2(position.x, position.y);
         transform.position = position;

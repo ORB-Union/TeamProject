@@ -21,8 +21,8 @@ public class PlayerControl : MonoBehaviour {
 
     float directionX = 0;
     bool walking = false;
-    float Speed = 8.0f; // 걷는 속도 8
-    float J_P = 15.0f; // 점프력   15
+    public float Speed = 8.0f; // 걷는 속도 8
+    public float J_P = 15.0f; // 점프력   15
     bool jumping = false;
    
     bool death;
@@ -113,13 +113,10 @@ public class PlayerControl : MonoBehaviour {
                 jumping = false;
             }
 
-            
-
-
             //Z키 누를시 박스생성 및 생성 지연시간 추가
             if (Input.GetKeyDown(KeyCode.Z))
             {
-                Invoke("CreateBoxFire", 2.0f); // 박스 생성지연 , 시간(1.0f초)
+                Invoke("CreateBoxFire", 1.2f); // 박스 생성지연 , 시간(1.0f초)
                 //GameObject BoxPosition = (GameObject)Instantiate (CreateBox); // Z키를 누르면 박스를 생성
                 //BoxPosition.transform.position = CreateBoxPosition.transform.position; 
                 //CreateBoxFire(); // 아래에 있음
@@ -159,7 +156,6 @@ public class PlayerControl : MonoBehaviour {
 
 
         }
-
         //위치 재조정
         transform.localScale = new Vector3(0.5f, 0.5f, 1.0f);
     }

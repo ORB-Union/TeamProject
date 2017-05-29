@@ -50,6 +50,7 @@
      <Compile Include="Assets\animation\Move_Control\ActiveBox.cs" />
      <Compile Include="Assets\animation\Move_Control\CreateBox.cs" />
      <Compile Include="Assets\animation\Move_Control\PlayerControl.cs" />
+     <Compile Include="Assets\animation\Sujung\SujungBreak.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>F:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
