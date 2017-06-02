@@ -46,12 +46,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Camera_Ctrl.cs" />
-     <Compile Include="Assets\animation\Move_Control\ActiveBox.cs" />
-     <Compile Include="Assets\animation\Move_Control\ActiveHeading.cs" />
-     <Compile Include="Assets\animation\Move_Control\CreateBox.cs" />
-     <Compile Include="Assets\animation\Move_Control\PlayerControl.cs" />
-     <Compile Include="Assets\animation\Sujung\SujungBreak.cs" />
+     <Compile Include="Assets\Camera\스크립트\Camera_Ctrl.cs" />
+     <Compile Include="Assets\kuriko.anim\기본이동\스크립트\PlayerControl.cs" />
+     <Compile Include="Assets\kuriko.anim\스킬\스크립트\ActiveBox.cs" />
+     <Compile Include="Assets\kuriko.anim\스킬\스크립트\ActiveHeading.cs" />
+     <Compile Include="Assets\kuriko.anim\스킬\스크립트\CreateBox.cs" />
+     <Compile Include="Assets\kuriko.anim\오브젝트\스크립트\SujungBreak.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>F:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
