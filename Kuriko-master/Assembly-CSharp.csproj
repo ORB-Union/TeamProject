@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0733B003-042D-14E7-8CDE-9E541C1ABD69}</ProjectGuid>
+    <ProjectGuid>{7D90595A-DADA-5DCC-E51A-900FA0D0536F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -47,6 +47,14 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Camera\스크립트\Camera_Ctrl.cs" />
+     <Compile Include="Assets\UI\forUI\Resizing.cs" />
+     <Compile Include="Assets\UI\forUI\Utility.cs" />
+     <Compile Include="Assets\UI\forUI\fadeinout.cs" />
+     <Compile Include="Assets\UI\forUI\nextstage.cs" />
+     <Compile Include="Assets\UI\forUI\prestage.cs" />
+     <Compile Include="Assets\UI\forUI\scenemove.cs" />
+     <Compile Include="Assets\UI\forUI\select_start.cs" />
+     <Compile Include="Assets\UI\forUI\time.cs" />
      <Compile Include="Assets\kuriko.anim\기본이동\스크립트\PlayerControl.cs" />
      <Compile Include="Assets\kuriko.anim\스킬\스크립트\ActiveBox.cs" />
      <Compile Include="Assets\kuriko.anim\스킬\스크립트\ActiveHeading.cs" />

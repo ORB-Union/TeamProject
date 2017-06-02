@@ -207,6 +207,6 @@ public class PlayerControl : MonoBehaviour {
     {
         float ratio = health / maxhealth;
         currentHealthbar.rectTransform.localScale = new Vector3(ratio, 1, 1);
-        ratioText.text = (ratio * 100).ToString("0") + '%';
+        ratioText.text = (ratio * 100).ToString("0") + ' '  + '%';
     }
 }
