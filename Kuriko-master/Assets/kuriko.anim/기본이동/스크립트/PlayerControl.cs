@@ -155,8 +155,12 @@ public class PlayerControl : MonoBehaviour {
     //진입상태
     void OnTriggerStay(Collider other)
     {
-
-
+        if (other.tag == "Handi")
+        {
+            health -= 0.1f;
+            Death();
+        }
+        UpdateHealthbar();
     }
 
     //박스 생성 위치변화

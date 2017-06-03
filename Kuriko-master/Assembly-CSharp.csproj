@@ -46,7 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Axe.cs" />
+     <Compile Include="Assets\BackGround\장애물, 오브젝트\Axe.cs" />
      <Compile Include="Assets\Camera\스크립트\Camera_Ctrl.cs" />
      <Compile Include="Assets\UI\forUI\Resizing.cs" />
      <Compile Include="Assets\UI\forUI\Utility.cs" />
