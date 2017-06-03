@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7D90595A-DADA-5DCC-E51A-900FA0D0536F}</ProjectGuid>
+    <ProjectGuid>{0733B003-042D-14E7-8CDE-9E541C1ABD69}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Axe.cs" />
      <Compile Include="Assets\Camera\스크립트\Camera_Ctrl.cs" />
      <Compile Include="Assets\UI\forUI\Resizing.cs" />
      <Compile Include="Assets\UI\forUI\Utility.cs" />
