@@ -66,7 +66,7 @@ public class SujungBreak : MonoBehaviour {
         if (other.tag == "Kuriko" && Heading == true)
         {
             animator.SetBool("Breaking", true);
-            DestroyObject(gameObject, 1.5f);
+            DestroyObject(gameObject, 1.2f);
         }
 
     }
