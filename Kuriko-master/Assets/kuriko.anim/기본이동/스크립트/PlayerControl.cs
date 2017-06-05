@@ -147,9 +147,18 @@ public class PlayerControl : MonoBehaviour {
     {
         if (other.tag == "Enemy")
         {
-            health -= 100;
+            health -= 100.0f;
             Death();           
         }
+
+
+        if (other.tag == "ToTem")
+        {
+            health -= 100.0f;
+            Death();
+        }
+
+
         UpdateHealthbar();
     }
 
@@ -175,6 +184,7 @@ public class PlayerControl : MonoBehaviour {
             health -= 0.1f;
             Death();
         }
+
 
         UpdateHealthbar();
     }
@@ -218,6 +228,7 @@ public class PlayerControl : MonoBehaviour {
     {
         if (health <= 0)
         {
+            health = 0.0f;
             death = true;
             animator.SetBool("Dies", true);
 
