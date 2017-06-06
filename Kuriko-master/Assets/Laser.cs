@@ -48,7 +48,7 @@ public class Laser : MonoBehaviour {
     {
         if (other.tag == "Kuriko" && OFF == true)
         {
-            DestroyObject(gameObject, 1.3f);
+            DestroyObject(gameObject, 0.5f);
         }
     }
 }

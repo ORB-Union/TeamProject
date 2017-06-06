@@ -158,8 +158,12 @@ public class PlayerControl : MonoBehaviour {
             Death();           
         }
 
- 
 
+        if (other.tag == "Totem")
+        {
+            health -= 100.0f;
+            Death();
+        }
 
         UpdateHealthbar();
     }
@@ -187,11 +191,7 @@ public class PlayerControl : MonoBehaviour {
             Death();
         }
 
-        if (other.tag == "Totem")
-        {
-            health -= 0.5f;
-            Death();
-        }
+
 
         UpdateHealthbar();
     }
