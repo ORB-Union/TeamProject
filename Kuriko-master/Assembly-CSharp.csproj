@@ -48,7 +48,10 @@
   <ItemGroup>
      <Compile Include="Assets\BackGround\Axe.cs" />
      <Compile Include="Assets\Camera\스크립트\Camera_Ctrl.cs" />
+     <Compile Include="Assets\Laser.cs" />
+     <Compile Include="Assets\LeverHit.cs" />
      <Compile Include="Assets\NewBehaviourScript.cs" />
+     <Compile Include="Assets\StoneMove.cs" />
      <Compile Include="Assets\UI\forUI\Resizing.cs" />
      <Compile Include="Assets\UI\forUI\Utility.cs" />
      <Compile Include="Assets\UI\forUI\bar_script.cs" />

@@ -42,6 +42,7 @@ public class SujungBreak : MonoBehaviour {
             if (HeadTimer > 0)
             {
                 HeadTimer -= Time.deltaTime;
+
             }
 
             else
@@ -68,6 +69,5 @@ public class SujungBreak : MonoBehaviour {
             animator.SetBool("Breaking", true);
             DestroyObject(gameObject, 1.2f);
         }
-
     }
 }

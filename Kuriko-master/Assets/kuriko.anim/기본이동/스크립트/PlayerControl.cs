@@ -55,8 +55,9 @@ public class PlayerControl : MonoBehaviour {
     }
     void Jump()
     {
-        // 죽었을때 or 'Active'라는 애니메이션이 애니메이터에서 작동될때 동작정지
-        if (death == true || animator.GetCurrentAnimatorStateInfo(0).nameHash == Animator.StringToHash("Base Layer.Active"))
+        // 죽었을때 or 'Active, Heading'라는 애니메이션이 애니메이터에서 작동될때 동작정지 (스킬 사용 동안 점프불가)
+        if (death == true || animator.GetCurrentAnimatorStateInfo(0).nameHash == Animator.StringToHash("Base Layer.Active")
+            || animator.GetCurrentAnimatorStateInfo(0).nameHash == Animator.StringToHash("Base Layer.Heading"))
             return;
         else // 아닐 때
         {
@@ -76,8 +77,9 @@ public class PlayerControl : MonoBehaviour {
     }
     void Move()
     {
-        // 죽었을때 or 'Active'라는 애니메이션이 애니메이터에서 작동될때 동작정지
-        if (death == true || animator.GetCurrentAnimatorStateInfo(0).nameHash == Animator.StringToHash("Base Layer.Active")) 
+        // 죽었을때 or 'Active, Heading'라는 애니메이션이 애니메이터에서 작동될때 동작정지 (스킬 사용 동안 걷기불가)
+        if (death == true || animator.GetCurrentAnimatorStateInfo(0).nameHash == Animator.StringToHash("Base Layer.Active")
+            || animator.GetCurrentAnimatorStateInfo(0).nameHash == Animator.StringToHash("Base Layer.Heading"))
         {
             return;
         }
@@ -87,7 +89,6 @@ public class PlayerControl : MonoBehaviour {
             if (animator)
             {
                 float h = Input.GetAxis("Horizontal");
-                float v = Input.GetAxis("Vertical");
                 walking = true;
                 if (h > 0)
                 {
@@ -121,14 +122,14 @@ public class PlayerControl : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        Move(); 
+        Jump();
         //죽을경우
-        if(health <= 0)
+        if (health <= 0)
         {
             Death();
 
         }
-        Move();
-        Jump();
         //Z키 누를시 박스생성 및 생성 지연시간 추가
 
         if (Input.GetKeyDown(KeyCode.Z))
@@ -139,6 +140,12 @@ public class PlayerControl : MonoBehaviour {
             //BoxPosition.transform.position = CreateBoxPosition.transform.position; 
             //CreateBoxFire(); // 아래에 있음
         }
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            Invoke("HeadingFire", 0.9f); // 헤딩 시 0.9f 뒤 HeadingFire 
+        }
+
         UpdateHealthbar();
     }
 
@@ -151,12 +158,7 @@ public class PlayerControl : MonoBehaviour {
             Death();           
         }
 
-
-        if (other.tag == "ToTem")
-        {
-            health -= 100.0f;
-            Death();
-        }
+ 
 
 
         UpdateHealthbar();
@@ -185,11 +187,34 @@ public class PlayerControl : MonoBehaviour {
             Death();
         }
 
+        if (other.tag == "Totem")
+        {
+            health -= 0.5f;
+            Death();
+        }
 
         UpdateHealthbar();
     }
 
-    //박스 생성 위치변화
+    //헤딩 시 전진
+    void HeadingFire()
+    {
+        if (death == true)
+        {
+            return;
+        }
+        else
+        {
+            if (!facingright)
+            {
+                transform.Translate(new Vector3(-7.0f, 0.0f, 0.0f)*Time.deltaTime * Speed);
+            }
+            else if (facingright)
+            {
+                transform.Translate(new Vector3(7.0f, 0.0f, 0.0f) * Time.deltaTime * Speed);
+            }
+        }
+    }
     void CreateBoxFire()
     {
         if (death == true)
@@ -214,8 +239,6 @@ public class PlayerControl : MonoBehaviour {
                 transform.localScale = new Vector3(0.6f * directionX, 0.4f, 1.0f);
                 //생성 위치 조정
                 Instantiate(rightCreateBoxPosition, Createpos.position * directionX, Quaternion.identity);
-
-
             }
             //위치 재조정
             transform.localScale = new Vector3(0.4f, 0.4f, 2.0f);
@@ -228,7 +251,6 @@ public class PlayerControl : MonoBehaviour {
     {
         if (health <= 0)
         {
-            health = 0.0f;
             death = true;
             animator.SetBool("Dies", true);
 
