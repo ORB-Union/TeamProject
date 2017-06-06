@@ -11,6 +11,7 @@ public class PlayerControl : MonoBehaviour {
     public Image currentHealthbar;
     public Text ratioText;
 
+	public Canvas Menu;//인게임메뉴캔버스용
 
     Animator animator;
     Rigidbody rb;
@@ -145,6 +146,12 @@ public class PlayerControl : MonoBehaviour {
         {
             Invoke("HeadingFire", 0.9f); // 헤딩 시 0.9f 뒤 HeadingFire 
         }
+
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			Time.timeScale = 0;
+			Menu.enabled = true;
+		}
 
         UpdateHealthbar();
     }
