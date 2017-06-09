@@ -202,6 +202,14 @@ public class PlayerControl : MonoBehaviour {
             Invoke("Endure_Hit", 1);
         }
 
+        if (other.tag == "BossBullet")
+        {
+            health -= 15.0f;
+            Hit();
+            Death();
+            Invoke("Endure_Hit", 1);
+        }
+
         UpdateHealthbar();
     }
 

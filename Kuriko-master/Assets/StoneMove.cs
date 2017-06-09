@@ -11,7 +11,7 @@ public class StoneMove : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        kuriko = GameObject.Find("KURIKO");
+        kuriko = GameObject.Find("KURIKO(1스테이지)");
     }
 
     // Update is called once per frame

@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\BackGround\Axe.cs" />
+     <Compile Include="Assets\Boss\BossAttack.cs" />
+     <Compile Include="Assets\Boss\BossMissile.cs" />
      <Compile Include="Assets\Camera\스크립트\Camera_Ctrl.cs" />
      <Compile Include="Assets\Laser.cs" />
      <Compile Include="Assets\LeverHit.cs" />
