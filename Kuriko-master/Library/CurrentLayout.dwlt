@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 492}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 2560
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 492}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -108,8 +108,8 @@ MonoBehaviour:
     y: 30
     width: 2560
     height: 947
-  m_MinSize: {x: 917, y: 442}
-  m_MaxSize: {x: 22012, y: 10021}
+  m_MinSize: {x: 913, y: 442}
+  m_MaxSize: {x: 22008, y: 10021}
   vertical: 0
   controlID: 23
 --- !u!114 &6
@@ -205,8 +205,8 @@ MonoBehaviour:
     y: 0
     width: 382
     height: 947
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -365,14 +365,14 @@ MonoBehaviour:
     width: 945
     height: 462
   m_SceneLighting: 1
-  lastFramingTime: 3451.5474260909355
+  lastFramingTime: 1907.745905243045
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -59.82401, y: -15.926401, z: -0.65999985}
+    m_Target: {x: -14.00761, y: 27.69636, z: -0.5}
     speed: 2
-    m_Value: {x: -59.82401, y: -15.926401, z: -0.65999985}
+    m_Value: {x: -14.00761, y: 27.69636, z: -0.5}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -399,9 +399,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 36.345074
+    m_Target: 6.6452355
     speed: 2
-    m_Value: 36.345074
+    m_Value: 6.6452355
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -501,23 +501,23 @@ MonoBehaviour:
     height: 926
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3c290000
-    m_LastClickedID: 0
-    m_ExpandedIDs: f8f6ffffe6fbffff00000000
+    m_SelectedIDs: 3668feff
+    m_LastClickedID: -104394
+    m_ExpandedIDs: ba74feff927cfeff4eeffeff9203ffff2a0ffffff62bffff0436ffff3856ffffd6fbffffe6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: "\uCD5C\uC0C1\uC704 \uD0C0\uC77C8"
+      m_OriginalName: "\uCD5C\uC0C1\uC704 \uD0C0\uC77C8"
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -104394
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
@@ -563,18 +563,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Boss
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Boss
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\6kmar\Documents\GitHub\TeamProject\Kuriko-master
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: de240000
-    m_LastClickedID: 9438
+    m_SelectedIDs: 62250000
+    m_LastClickedID: 9570
     m_ExpandedIDs: 00000000de240000b2260000e82b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0

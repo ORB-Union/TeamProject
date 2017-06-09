@@ -23,7 +23,7 @@ public class BossMissile : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Kuriko")
+        if(other.tag == "Kuriko" || other.tag == "Ground")
         {
             Destroy(gameObject, 0);
         }
