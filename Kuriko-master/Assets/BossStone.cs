@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BossStone : MonoBehaviour {
+    public float Speed = 3.0f;
     bool up = true;
     bool down = false;
     // Use this for initialization
@@ -14,8 +15,8 @@ public class BossStone : MonoBehaviour {
     {
         if (up == true)
         {
-            transform.Translate(new Vector3(0.0f, 0.06f, 0.0f));
-            if (transform.position.y > 39.7f)
+            transform.Translate(new Vector3(0.0f, Speed * Time.deltaTime, 0.0f));
+            if (transform.position.y > 39.3f)
             {
                 up = false;
                 down = true;
@@ -26,8 +27,8 @@ public class BossStone : MonoBehaviour {
     {
         if (down == true)
         {
-            transform.Translate(new Vector3(0.0f, -0.06f, 0.0f));
-            if (transform.position.y < 29.2f)
+            transform.Translate(new Vector3(0.0f, -Speed * Time.deltaTime, 0.0f));
+            if (transform.position.y < 26.0f)
             {
                 up = true;
                 down = false;

@@ -20,10 +20,8 @@ public class BossAttack : MonoBehaviour {
 
     void Start ()
     {
-        Attack = false;
-        AttackTimer = 0;
-        AttackCd = 2f;
-        InvokeRepeating("Fire", 1, 3.5f);
+       
+        InvokeRepeating("Fire", 1, 3.0f);
         anim = gameObject.GetComponent<Animator>();
     }
 
@@ -36,24 +34,6 @@ public class BossAttack : MonoBehaviour {
     void Fire()
     {
         GameObject bossbullet01 = (GameObject)Instantiate(BossBullet);
-        if (!Attack)
-        {
-            Attack = true;
-            AttackTimer = AttackCd;
-        }
-
-        if (Attack)
-        {
-            if (AttackTimer > 0)
-            {
-                AttackTimer -= Time.deltaTime;
-            }
-            else
-            {
-                Attack = false;
-            }
-        }
-        anim.SetBool("Attack", Attack);   
         bossbullet01.transform.position = BossMissilePos.transform.position;
     }
 }

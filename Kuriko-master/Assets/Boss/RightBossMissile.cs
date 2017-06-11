@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossMissile : MonoBehaviour {
+public class RightBossMissile : MonoBehaviour {
 
     public int speed;
     public float delay;
